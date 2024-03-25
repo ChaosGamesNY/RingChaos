@@ -92,6 +92,11 @@ minecraft {
             args '--nogui'
         }
 
+        all {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+        }
+
         // This run config launches GameTestServer and runs all registered gametests, then exits.
         // By default, the server will crash when no gametests are provided.
         // The gametest system is also enabled by default for other run configs under the /test command.
@@ -116,35 +121,47 @@ repositories {
     // Put repositories for dependencies here
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
 
+    maven { // JEI
+        url "https://maven.blamejared.com"
+    }
+    maven { // TOP
+        url "https://maven.k-4u.nl"
+    }
+    maven { // CurseMaven
+        url "https://cursemaven.com"
+    }
+    maven { url "https://maven.shedaniel.me/" }
+
     // If you have mod jar dependencies in ./libs, you can declare them as a repository like so.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html#sub:flat_dir_resolver
-    // flatDir {
-    //     dir 'libs'
-    // }
+    flatDir {
+        dirs 'mods'
+    }
+    mavenLocal()
 }
 
 dependencies {
-    // Specify the version of Minecraft to use.
-    // Any artifact can be supplied so long as it has a "userdev" classifier artifact and is a compatible patcher artifact.
-    // The "userdev" classifier will be requested and setup by ForgeGradle.
-    // If the group id is "net.minecraft" and the artifact id is one of ["client", "server", "joined"],
-    // then special handling is done to allow a setup of a vanilla dependency without the use of an external repository.
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
-    // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
+    // ============================================== FOR TESTING ================================================== \\
+    // These will be removed before publishing and are only here to make the testing environment easier.
+    runtimeOnly fg.deobf("curse.maven:jei-238222:5101366")
+    //runtimeOnly fg.deobf("curse.maven:cloth-config-348521:4973441")
+    runtimeOnly fg.deobf("curse.maven:catalogue-459701:4766090")
+    runtimeOnly fg.deobf("curse.maven:configured-457570:5180900")
 
-    // Example mod dependency using a mod jar from ./libs with a flat dir repository
-    // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
-    // The group id is ignored when searching -- in this case, it is "blank"
-    // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
+    runtimeOnly fg.deobf("curse.maven:inventory-hud-forge-357540:4699629")
 
-    // For more info:
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    runtimeOnly fg.deobf("curse.maven:jade-324717:5072729-api-5073670")
+    runtimeOnly fg.deobf("curse.maven:jade-addons-583345:4925840")
+
+    runtimeOnly fg.deobf("curse.maven:xaeros-world-map-317780:5073804")
+    runtimeOnly fg.deobf("curse.maven:xaeros-minimap-263420:5060708")
+
+    runtimeOnly fg.deobf("curse.maven:falling-tree-349559:5010620")
+
+    runtimeOnly fg.deobf("curse.maven:vein-mining-431611:5198310-sources")
+
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -158,6 +175,7 @@ tasks.named('processResources', ProcessResources).configure {
             loader_version_range: loader_version_range,
             mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors: mod_authors, mod_description: mod_description,
+            mod_issue_tracker_URL : mod_issue_tracker_URL, mod_homepage_URL : mod_homepage_URL,
     ]
     inputs.properties replaceProperties
 
