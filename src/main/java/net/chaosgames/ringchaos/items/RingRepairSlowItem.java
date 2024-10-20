@@ -13,20 +13,18 @@ public class RingRepairSlowItem extends Item {
         super(pProperties);
     }
 
-    int tickCount = 0;
-
     @Override
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
         Player player = (Player) pEntity;
         if(pSlotId == 0) {
-            if(tickCount >= 200) {
+            if(Math.floorMod(pLevel.getGameTime(), 200) == 0) {
                 Inventory inventory = player.getInventory();
 
                 for (int i = 0; i <= 40; i++) {
                     ItemStack itemStack = inventory.getItem(i);
                     if(Config.RING_REPAIR_XP.get()) {
                         int playerXP = player.totalExperience;
-                        if (itemStack.isDamaged() && itemStack.getDamageValue() <= playerXP) {
+                        if (itemStack.isDamaged() && playerXP > 0) {
                             itemStack.setDamageValue(itemStack.getDamageValue() - 1);
                             player.giveExperiencePoints(-1);
 
@@ -40,10 +38,6 @@ public class RingRepairSlowItem extends Item {
                         }
                     }
                 }
-
-                tickCount = 0;
-            } else {
-                tickCount++;
             }
         }
         super.inventoryTick(pStack, pLevel, pEntity, pSlotId, pIsSelected);

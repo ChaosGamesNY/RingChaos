@@ -17,16 +17,17 @@ public class Config {
 
     private static void registerCommonConfigs() {
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
+        registerCommonConfig(COMMON_BUILDER);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, COMMON_BUILDER.build());
     }
 
     private static void registerServerConfigs() {
         ForgeConfigSpec.Builder SERVER_BUILDER = new ForgeConfigSpec.Builder();
-        registerServerConfig(SERVER_BUILDER);
+        //registerServerConfig(SERVER_BUILDER);
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, SERVER_BUILDER.build());
     }
     public static ForgeConfigSpec.BooleanValue RING_REPAIR_XP;
-    public static void registerServerConfig(ForgeConfigSpec.Builder builder) {
+    public static void registerCommonConfig(ForgeConfigSpec.Builder builder) {
         builder.comment("Settings for Ring Chaos Mod").push("ringchaos");
         RING_REPAIR_XP = builder
                 .comment("Do the rings of repair take XP?")

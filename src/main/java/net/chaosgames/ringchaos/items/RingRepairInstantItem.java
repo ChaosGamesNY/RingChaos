@@ -1,6 +1,7 @@
 package net.chaosgames.ringchaos.items;
 
 import net.chaosgames.ringchaos.setup.Config;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Inventory;
@@ -21,6 +22,7 @@ public class RingRepairInstantItem extends Item {
             ItemStack itemStack = inventory.getItem(i);
             if(Config.RING_REPAIR_XP.get()) {
                 int playerXP = pPlayer.totalExperience;
+                pPlayer.sendSystemMessage(Component.literal("PlayerXP is " + playerXP));
                 if(itemStack.getDamageValue() <= playerXP) {
                     pPlayer.giveExperiencePoints(-itemStack.getDamageValue());
                     itemStack.setDamageValue(0);

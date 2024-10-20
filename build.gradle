@@ -146,21 +146,14 @@ dependencies {
     // ============================================== FOR TESTING ================================================== \\
     // These will be removed before publishing and are only here to make the testing environment easier.
     runtimeOnly fg.deobf("curse.maven:jei-238222:5101366")
-    //runtimeOnly fg.deobf("curse.maven:cloth-config-348521:4973441")
+
     runtimeOnly fg.deobf("curse.maven:catalogue-459701:4766090")
     runtimeOnly fg.deobf("curse.maven:configured-457570:5180900")
 
     runtimeOnly fg.deobf("curse.maven:inventory-hud-forge-357540:4699629")
 
-    runtimeOnly fg.deobf("curse.maven:jade-324717:5072729-api-5073670")
+    runtimeOnly fg.deobf("curse.maven:jade-324717:5390389")
     runtimeOnly fg.deobf("curse.maven:jade-addons-583345:4925840")
-
-    runtimeOnly fg.deobf("curse.maven:xaeros-world-map-317780:5073804")
-    runtimeOnly fg.deobf("curse.maven:xaeros-minimap-263420:5060708")
-
-    runtimeOnly fg.deobf("curse.maven:falling-tree-349559:5010620")
-
-    runtimeOnly fg.deobf("curse.maven:vein-mining-431611:5198310-sources")
 
 }
 
