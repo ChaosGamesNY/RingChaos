@@ -1,10 +1,11 @@
 {
+  "config.ringchaos.server.title": "Server side settings for Ring Chaos Mod",
+  "config.ringchaos.server.ring_repair_xp": "Do the rings of repair take XP?",
+
   "creativetab.ring_chaos_tab": "Ring Chaos",
 
   "item.ringchaos.ring_of_damage": "Ring of Damage",
 
-  "item.ringchaos.ring_of_mending_instant": "Ring of Instant Mending",
-  "item.ringchaos.ring_of_mending_slow": "Ring of Mending",
   "item.ringchaos.ring_of_repair_instant": "Ring of Instant Repair",
   "item.ringchaos.ring_of_repair_slow": "Ring of Repair"
 }

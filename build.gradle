@@ -13,7 +13,6 @@ base {
     archivesName = mod_id
 }
 
-// Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
@@ -155,6 +154,12 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:jade-324717:5390389")
     runtimeOnly fg.deobf("curse.maven:jade-addons-583345:4925840")
 
+    runtimeOnly fg.deobf("curse.maven:xaeros-world-map-317780:5073804")
+    runtimeOnly fg.deobf("curse.maven:xaeros-minimap-263420:5060708")
+
+    runtimeOnly fg.deobf("curse.maven:falling-tree-349559:5010620")
+
+    runtimeOnly fg.deobf("curse.maven:vein-mining-431611:5198310-sources")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

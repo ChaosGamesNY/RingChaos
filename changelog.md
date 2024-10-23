@@ -38,3 +38,9 @@
 - Figure out why items in inventory that are not damageable become unable to stack with the same type of item after a repair ring runs through the inventory.
 #### Tasks accomplished on this date
 - Moved config to Common to fix the issue of the changes needing a restart to apply.
+- Moved the config back to Server.
+- Fixed issue with non-damagable items being effected.
+### 0.2.1, October 24, 2024
+#### Tasks accomplished on this date
+- Fleshed out ideas in the readme and formatted it properly
+- commit made
