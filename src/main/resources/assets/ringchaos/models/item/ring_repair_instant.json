@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "ringchaos:item/ring_of_repair_slow"
+    "layer0": "ringchaos:item/ring_repair_instant"
   }
 }

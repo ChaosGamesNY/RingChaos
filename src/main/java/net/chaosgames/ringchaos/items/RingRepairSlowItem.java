@@ -29,7 +29,7 @@ public class RingRepairSlowItem extends Item {
 
                     int damage = stack.getDamageValue();
 
-                    if(Config.RING_REPAIR_XP.get()) {
+                    if(Config.RING_REPAIR_SLOW_XP.get()) {
                         int playerXp = Utilities.calcPlayerTotalXp(player.experienceProgress, player.experienceLevel);
 
                         if (playerXp > 0) {

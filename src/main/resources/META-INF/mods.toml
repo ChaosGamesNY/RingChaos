@@ -9,7 +9,7 @@ issueTrackerURL="${mod_issue_tracker_URL}"
     description='''${mod_description}'''
     version="${mod_version}"
     authors="${mod_authors}"
-    logoFile="icon.png"
+    logoFile="${mod_icon}"
     logoBlur=false
     displayURL="${mod_homepage_URL}"
 
@@ -28,4 +28,4 @@ issueTrackerURL="${mod_issue_tracker_URL}"
     side="BOTH"
 
 [modproperties.${mod_id}]
-    catalogueImageIcon="icon.png"
+    catalogueImageIcon="${mod_icon}"

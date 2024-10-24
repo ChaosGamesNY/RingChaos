@@ -1,9 +1,9 @@
 package net.chaosgames.ringchaos.setup;
 
-import net.minecraft.network.chat.Component;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
+
 
 public class Config {
     public static void register() {
@@ -27,12 +27,21 @@ public class Config {
         registerServerConfig(SERVER_BUILDER);
         ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, SERVER_BUILDER.build());
     }
-    public static ForgeConfigSpec.BooleanValue RING_REPAIR_XP;
+    public static ForgeConfigSpec.BooleanValue RING_REPAIR_INSTANT_XP;
+    public static ForgeConfigSpec.BooleanValue RING_REPAIR_SLOW_XP;
     public static void registerServerConfig(ForgeConfigSpec.Builder builder) {
-        builder.comment(String.valueOf(Component.translatable("config.ringchaos.server.title"))).push("ringchaos");
-        RING_REPAIR_XP = builder
-                .comment(String.valueOf(Component.translatable("config.ringchaos.server.ring_repair_xp")))
-                .define("ring_repair_xp", false);
+        builder.comment("Which rings will use XP?")
+                .translation("config.ringchaos.server.ring_xp")
+                .push("Ring XP Usage");
+
+        RING_REPAIR_INSTANT_XP = builder
+                .comment("Ring of Restoration")
+                .translation("item.ringchaos.ring_repair_instant")
+                .define("ring_repair_instant_xp", false);
+        RING_REPAIR_SLOW_XP = builder
+                .comment("Ring of Reconstruction")
+                .translation("item.ringchaos.ring_repair_slow")
+                .define("ring_repair_slow_XP", false);
         builder.pop();
     }
 }

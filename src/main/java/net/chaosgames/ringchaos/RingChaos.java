@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLEnvironment;
 import org.slf4j.Logger;
 
 @Mod(RingChaos.MOD_ID)
@@ -29,7 +30,9 @@ public class RingChaos {
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(Registration::addCreative);
 
-        MinecraftForge.EVENT_BUS.addListener(Commands::onRegisterCommands);
+        if(FMLEnvironment.production) {
+            MinecraftForge.EVENT_BUS.addListener(Commands::onRegisterCommands);
+        }
 
     }
 

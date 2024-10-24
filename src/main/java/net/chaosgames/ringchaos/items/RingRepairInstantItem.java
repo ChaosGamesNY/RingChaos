@@ -24,7 +24,7 @@ public class RingRepairInstantItem extends Item {
             if (!stack.isDamageableItem() || !stack.isDamaged())
                 continue;
 
-            if(Config.RING_REPAIR_XP.get()) {
+            if(Config.RING_REPAIR_INSTANT_XP.get()) {
                 int playerXp = Utilities.calcPlayerTotalXp(player.experienceProgress, player.experienceLevel);
                 int damage = stack.getDamageValue();
                 if(damage <= playerXp) {

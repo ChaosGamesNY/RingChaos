@@ -30,7 +30,8 @@ public class Commands {
 
     public static int DisplayPlayerXPCount(CommandContext<CommandSourceStack> pcommandSourceStackCommandContext) {
         Player player = pcommandSourceStackCommandContext.getSource().getPlayer();
-        player.sendSystemMessage(Component.literal("Player XP: " + player.totalExperience));
+        int totalXp = Utilities.calcPlayerTotalXp(player.experienceProgress, player.experienceLevel);
+        player.sendSystemMessage(Component.literal("Player total XP: " + totalXp + "/nPlayer Level: " + player.experienceLevel + "/nPlayer XP: " + player.experienceProgress + "/nLevel Points: " + Utilities.calcTotalXpForLevel(player.experienceLevel)));
 
         return 1;
     }

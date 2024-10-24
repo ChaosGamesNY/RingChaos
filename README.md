@@ -52,9 +52,10 @@ by **ChaosGames**
   - Undecided if it will work on bedrock blocks
 #### Stone Throwing Ring
   - Can break glass and give a drop
-  - Drops will consist of glass shards that can be crafted back into glass
-      - amount dropped would vary based on glass pane vs glass block
-      - amount dropped by each would be enough to craft into the respective block that got broken
+  - Drops will consist of a broken glass item that can be crafted back into glass
+  - Amount dropped would vary based on glass pane vs glass block
+  - Amount dropped by each would be enough to craft into the respective block that got broken
+  - Re-crafting the original glass block/pane will be possible in the 2x2 grid within the player inventory
   - Tinted glass will drop generic shards and need to be re tinted.
 #### Ring of the Cleric:
   - Can heal player
@@ -62,7 +63,8 @@ by **ChaosGames**
   - Might replace need for full hunger to heal
   - Might take XP
   - Needs more thought....
-## Further To-Do List
+## Other plans
 - Remove all the messy comments from the forge MDK template.
-- Add a console command to trigger a config reload
+- ~~Add a console command to trigger a config reload~~ Idea scrapped.
+- Make Ring of Reconstruction work from a curios ring slot.
 

@@ -40,7 +40,15 @@
 - Moved config to Common to fix the issue of the changes needing a restart to apply.
 - Moved the config back to Server.
 - Fixed issue with non-damagable items being effected.
-### 0.2.1, October 24, 2024
+### 0.2.1, October 23, 2024
 #### Tasks accomplished on this date
 - Fleshed out ideas in the readme and formatted it properly
 - commit made
+### 0.2.2, October 24, 2024
+#### Tasks accomplished on this date
+- Got the XP calculation working correctly
+- Gave the completed rings final names
+- Cleaned up the messy comments from the Forge MDK template
+- Fixed issue with config strings
+### 1.0.0, October 24, 2024
+- Initial Release?
