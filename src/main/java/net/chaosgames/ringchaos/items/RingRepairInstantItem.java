@@ -1,7 +1,7 @@
 package net.chaosgames.ringchaos.items;
 
-import net.chaosgames.ringchaos.setup.Config;
-import net.chaosgames.ringchaos.setup.Utilities;
+import net.chaosgames.ringchaos.init.ConfigInit;
+import net.chaosgames.ringchaos.misc.Utilities;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Inventory;
@@ -24,7 +24,7 @@ public class RingRepairInstantItem extends Item {
             if (!stack.isDamageableItem() || !stack.isDamaged())
                 continue;
 
-            if(Config.RING_REPAIR_INSTANT_XP.get()) {
+            if(ConfigInit.RING_REPAIR_INSTANT_XP.get()) {
                 int playerXp = Utilities.calcPlayerTotalXp(player.experienceProgress, player.experienceLevel);
                 int damage = stack.getDamageValue();
                 if(damage <= playerXp) {

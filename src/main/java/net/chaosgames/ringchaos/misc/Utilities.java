@@ -1,4 +1,4 @@
-package net.chaosgames.ringchaos.setup;
+package net.chaosgames.ringchaos.misc;
 
 public class Utilities {
     public static int calcPlayerTotalXp(double playerXp, int playerLevel) {

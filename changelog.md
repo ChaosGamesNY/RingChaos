@@ -50,5 +50,11 @@
 - Gave the completed rings final names
 - Cleaned up the messy comments from the Forge MDK template
 - Fixed issue with config strings
-### 1.0.0, October 24, 2024
-- Initial Release?
+### 0.2.3, October 25, 2024
+#### Tasks accomplished on this date
+- Clean up and re-arrange the classes and packages to make a bit more sense
+- Made creative mode icon item unobtainable
+#### Needed changes noticed on this date
+- ~~Maybe make the tab icon cycle the items in the tab~~ Abandoned until we know more Java.
+### 1.0.0, October 26, 2024
+- Initial release!

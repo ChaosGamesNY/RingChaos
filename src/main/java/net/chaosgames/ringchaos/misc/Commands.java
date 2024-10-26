@@ -1,4 +1,4 @@
-package net.chaosgames.ringchaos.setup;
+package net.chaosgames.ringchaos.misc;
 
 import com.mojang.brigadier.context.CommandContext;
 import net.minecraft.commands.CommandSourceStack;

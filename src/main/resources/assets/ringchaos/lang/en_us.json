@@ -1,6 +1,6 @@
 {
   "config.ringchaos.server.ring_xp": "Ring XP Usage",
-  "creativetab.ring_chaos_tab": "Ring Chaos",
+  "constants.ringchaos.mod_name": "Ring Chaos",
   "item.ringchaos.ring_repair_instant": "Ring of Restoration",
   "item.ringchaos.ring_repair_slow": "Ring of Reconstruction",
   "item.ringchaos.ring_damage": "Ring of Damage"

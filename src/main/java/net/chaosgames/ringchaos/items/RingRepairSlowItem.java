@@ -1,7 +1,7 @@
 package net.chaosgames.ringchaos.items;
 
-import net.chaosgames.ringchaos.setup.Config;
-import net.chaosgames.ringchaos.setup.Utilities;
+import net.chaosgames.ringchaos.init.ConfigInit;
+import net.chaosgames.ringchaos.misc.Utilities;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -29,7 +29,7 @@ public class RingRepairSlowItem extends Item {
 
                     int damage = stack.getDamageValue();
 
-                    if(Config.RING_REPAIR_SLOW_XP.get()) {
+                    if(ConfigInit.RING_REPAIR_SLOW_XP.get()) {
                         int playerXp = Utilities.calcPlayerTotalXp(player.experienceProgress, player.experienceLevel);
 
                         if (playerXp > 0) {

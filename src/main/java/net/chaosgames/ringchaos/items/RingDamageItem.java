@@ -14,7 +14,7 @@ public class RingDamageItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         Inventory inventory = player.getInventory();
-        for (int i = 0; i <= 40; i++) {
+        for (int i = 0; i <= inventory.getContainerSize(); i++) {
             ItemStack stack = inventory.getItem(i);
             if(stack.isDamageableItem()) {
                 stack.setDamageValue(stack.getMaxDamage() - 5);
@@ -22,4 +22,5 @@ public class RingDamageItem extends Item {
         }
         return InteractionResultHolder.pass(player.getItemInHand(hand));
     }
+
 }

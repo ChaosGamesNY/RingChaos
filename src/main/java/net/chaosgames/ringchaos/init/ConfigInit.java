@@ -1,11 +1,11 @@
-package net.chaosgames.ringchaos.setup;
+package net.chaosgames.ringchaos.init;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
 
 
-public class Config {
+public class ConfigInit {
     public static void register() {
         registerServerConfigs();
         registerCommonConfigs();
