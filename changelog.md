@@ -56,5 +56,5 @@
 - Made creative mode icon item unobtainable
 #### Needed changes noticed on this date
 - ~~Maybe make the tab icon cycle the items in the tab~~ Abandoned until we know more Java.
-### 1.0.0, October 26, 2024
+### 1.0.0, October 29, 2024
 - Initial release!

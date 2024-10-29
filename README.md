@@ -22,7 +22,7 @@ by **ChaosGames**
   - Can be configured to take 1 XP from the player for each damage point repaired.
   - If configured to take XP and not enough XP is available to fully repair all damaged items, all XP will be used until empty and repair only as much as the amount of XP taken.
 
-#### Ring of Damage
+#### Second Hand Ring
   - Instantly damages all damageable items in the player's inventory down to 5 uses left
   - Executes this upon use via right-clicking with the item in the main hand
   - Will not deal more damage if used twice without repairing the items before second use.
@@ -64,7 +64,7 @@ by **ChaosGames**
   - Might take XP
   - Needs more thought....
 ## Other plans
-- Remove all the messy comments from the forge MDK template.
-- ~~Add a console command to trigger a config reload~~ Idea scrapped.
+- ~~Remove all the messy comments from the forge MDK template.~~ Done
+- ~~Add a console command to trigger a config reload.~~ Idea scrapped
 - Make Ring of Reconstruction work from a curios ring slot.
 
