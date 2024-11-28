@@ -2,6 +2,7 @@ package net.chaosgames.ringchaos.init;
 
 import net.chaosgames.ringchaos.RingChaos;
 import net.chaosgames.ringchaos.items.RingDamageItem;
+import net.chaosgames.ringchaos.items.RingGlassItem;
 import net.chaosgames.ringchaos.items.RingRepairInstantItem;
 import net.chaosgames.ringchaos.items.RingRepairSlowItem;
 import net.minecraft.world.item.Item;
@@ -29,4 +30,12 @@ public class ItemInit {
                     .rarity(Rarity.RARE)
                     .stacksTo(1)
             )));
+    public static final RegistryObject<Item> RING_GLASS = addToTab(ITEMS.register("ring_glass",
+            () -> new RingGlassItem(new Item.Properties()
+                    .rarity(Rarity.COMMON)
+                    .durability(100))));
+    public static final RegistryObject<Item> SHATTERED_GLASS_BLOCK = addToTab(ITEMS.register("shattered_glass_block",
+            () -> new Item(new Item.Properties())));
+    public static final RegistryObject<Item> SHATTERED_GLASS_PANE = addToTab(ITEMS.register("shattered_glass_pane",
+            () -> new Item(new Item.Properties())));
 }

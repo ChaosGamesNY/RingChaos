@@ -1,7 +1,10 @@
 # Ring Chaos
-by **ChaosGames**
+by ChaosGames
 
+---
 **Ring Chaos** is a pack of mystical rings with various uses. The goal of these rings is to create new useful items that can not only make keeping your favorite tools around longer, but can add tools that have more specific and sometimes very powerful uses. More rings may be added in future updates.
+
+---
 ## Description of Items Added by Ring Chaos
 ### Completed Rings as of release 1.0.0
 #### Ring of Reconstruction
@@ -30,6 +33,16 @@ by **ChaosGames**
   - Can only be obtained via cheats (at this time)
   - Was made purely for testing purposes but can be made available via crafting if desired.
 
+### Rings in progress for upcoming Release 1.1.*
+#### Stone Throwing Ring
+- Can break glass and give a drop
+- Drops will consist of a broken glass item that can be crafted back into glass
+- Amount dropped would vary based on glass pane vs glass block
+- Amount dropped by each would be enough to craft into the respective block that got broken
+- Re-crafting the original glass block/pane will be possible in the 2x2 grid within the player inventory
+- Tinted glass will drop generic shards and need to be re tinted.
+
+
 ### Rings in planning:
 
 #### Minor Ring of Breakage
@@ -50,13 +63,6 @@ by **ChaosGames**
   - Deletes any block it is used on.
   - Does not _break_ the block instead _deletes_ it and no drop is made.
   - Undecided if it will work on bedrock blocks
-#### Stone Throwing Ring
-  - Can break glass and give a drop
-  - Drops will consist of a broken glass item that can be crafted back into glass
-  - Amount dropped would vary based on glass pane vs glass block
-  - Amount dropped by each would be enough to craft into the respective block that got broken
-  - Re-crafting the original glass block/pane will be possible in the 2x2 grid within the player inventory
-  - Tinted glass will drop generic shards and need to be re tinted.
 #### Ring of the Cleric:
   - Can heal player
   - Might work like a heal potion

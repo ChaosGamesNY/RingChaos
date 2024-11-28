@@ -58,3 +58,9 @@
 - ~~Maybe make the tab icon cycle the items in the tab~~ Abandoned until we know more Java.
 ### 1.0.0, October 29, 2024
 - Initial release!
+### 1.1.0, November 12, 26, 27, 28, 2024
+- Added Stone Throwing Ring.
+- Stone Throwing Ring fully functional!
+- Broken glass drops and recipes need tweaking.
+- Final testing revealed bug.
+- Fixed said bug.
