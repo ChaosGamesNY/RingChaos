@@ -16,16 +16,17 @@ out
 # gradle
 build
 .gradle
-/gradle/
+gradle
 
 # other
 eclipse
 run
-/run-data/
+run-data
 generated
 test
+mods
+run-data/config
+run-data/logs
 
 # Files from Forge MDK
 forge*changelog.txt
-
-/mods/

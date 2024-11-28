@@ -1,7 +1,10 @@
 {
   "config.ringchaos.server.ring_xp": "Ring XP Usage",
   "constants.ringchaos.mod_name": "Ring Chaos",
+  "item.ringchaos.ring_damage": "Second Hand Ring",
+  "item.ringchaos.ring_glass": "Stone Throwing Ring",
   "item.ringchaos.ring_repair_instant": "Ring of Restoration",
   "item.ringchaos.ring_repair_slow": "Ring of Reconstruction",
-  "item.ringchaos.ring_damage": "Second Hand Ring"
+  "item.ringchaos.shattered_glass_block": "Shattered Glass",
+  "item.ringchaos.shattered_glass_pane": "Shattered Glass Pane"
 }
