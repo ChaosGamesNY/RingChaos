@@ -33,7 +33,7 @@ by ChaosGames
   - Can only be obtained via cheats (at this time)
   - Was made purely for testing purposes but can be made available via crafting if desired.
 
-### Rings in progress for upcoming Release 1.1.*
+### Rings added in Release 1.1.1
 #### Stone Throwing Ring
 - Can break glass and give a drop
 - Drops will consist of a broken glass item that can be crafted back into glass

@@ -9,14 +9,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
-import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
@@ -58,10 +54,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.GLASS), has(Tags.Items.GLASS))
                 .save(pWriter);
 
-        oreSmeltingRecipe(pWriter, Ingredient.of(ItemInit.SHATTERED_GLASS_BLOCK.get()), RecipeCategory.BUILDING_BLOCKS, Items.GLASS.asItem(), 0.25f, 200, "smelting_shattered_glass_block");
-        oreBlastingRecipe(pWriter, Ingredient.of(ItemInit.SHATTERED_GLASS_BLOCK.get()), RecipeCategory.BUILDING_BLOCKS, Items.GLASS.asItem(), 0.25f, 100, "blasting_shattered_glass_block");
-        oreSmeltingRecipe(pWriter, Ingredient.of(ItemInit.SHATTERED_GLASS_PANE.get()), RecipeCategory.BUILDING_BLOCKS, Items.GLASS_PANE.asItem(), 0.25f, 200, "smelting_shattered_glass_pane");
-        oreBlastingRecipe(pWriter, Ingredient.of(ItemInit.SHATTERED_GLASS_PANE.get()), RecipeCategory.BUILDING_BLOCKS, Items.GLASS_PANE.asItem(), 0.25f, 100, "blasting_shattered_glass_pane");
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.GLASS)
+                .requires(ItemInit.SHATTERED_GLASS.get(), 4)
+                .unlockedBy(getHasName(ItemInit.SHATTERED_GLASS.get()), has(ItemInit.SHATTERED_GLASS.get()))
+                .save(pWriter, new ResourceLocation(RingChaos.MOD_ID, "glass_from_shattered_glass"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.GLASS_PANE)
+                .requires(ItemInit.SHATTERED_GLASS.get(), 2)
+                .unlockedBy(getHasName(ItemInit.SHATTERED_GLASS.get()), has(ItemInit.SHATTERED_GLASS.get()))
+                .save(pWriter, new ResourceLocation(RingChaos.MOD_ID, "glass_pane_from_shattered_glass"));
     }
 
     private void oreSmeltingRecipe(Consumer<FinishedRecipe> consumer, Ingredient ingredient, RecipeCategory category, Item result, float experience, int cookTime, String name) {

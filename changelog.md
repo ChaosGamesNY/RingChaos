@@ -64,3 +64,7 @@
 - Broken glass drops and recipes need tweaking.
 - Final testing revealed bug.
 - Fixed said bug.
+### 1.1.1, December 4, 2024
+- Got the recipes for the glass drops back to glass working as initially intended
+- Final testing!
+- Release!
