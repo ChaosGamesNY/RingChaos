@@ -27,5 +27,10 @@ issueTrackerURL="${mod_issue_tracker_URL}"
     ordering="NONE"
     side="BOTH"
 
+[[dependencies.${mod_id}]]
+    modId = "curios"
+    mandatory = false
+    versionRange ="${curios_version}"
+
 [modproperties.${mod_id}]
     catalogueImageIcon="${mod_icon}"

@@ -17,7 +17,7 @@ public class EventHandler {
         Inventory inventory = player.getInventory();
         for (int i = 0; i < inventory.getContainerSize(); i++) {
             ItemStack stack = inventory.getItem(i);
-            if (stack.is(ItemInit.RING_CHAOS_TAB_ICON.get()) || stack.is(ItemInit.RING_DAMAGE.get())) {
+            if (stack.is(ItemInit.RING_CHAOS_TAB_ICON.get())) {
                 inventory.removeItem(stack);
             }
         }

@@ -28,8 +28,15 @@ public class DataGenerators {
 
         ModBlockTagGenerator blockTagGenerator = generator.addProvider(event.includeServer(),
                 new ModBlockTagGenerator(packOutput, lookupProvider, existingFileHelper));
-        generator.addProvider(event.includeServer(), new ModItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
+        generator.addProvider(event.includeServer(),
+                new ModItemTagGenerator(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
 
         generator.addProvider(event.includeServer(), new ModGlobalLootModifiersProvider(packOutput));
+
+        generator.addProvider(event.includeServer(),
+                new ModCuriosProvider(RingChaos.MOD_ID, event.getGenerator().getPackOutput(), event.getExistingFileHelper(), event.getLookupProvider()));
+        generator.addProvider(event.includeServer(),
+                new ModCuriosItemTagProvider(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
+
     }
 }

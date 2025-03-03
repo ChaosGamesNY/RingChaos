@@ -24,9 +24,7 @@ public class RingChaos {
 
         ModLootModifiers.register(modEventBus);
 
-        if(!SharedConstants.IS_RUNNING_IN_IDE) {
-            MinecraftForge.EVENT_BUS.addListener(Commands::onRegisterCommands);
-        }
+        MinecraftForge.EVENT_BUS.addListener(Commands::onRegisterCommands);
 
     }
 

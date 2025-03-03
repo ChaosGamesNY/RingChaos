@@ -9,6 +9,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import top.theillusivec4.curios.api.CuriosApi;
 
 public class RingRepairInstantItem extends Item {
     public RingRepairInstantItem(Properties properties) {
@@ -18,7 +19,11 @@ public class RingRepairInstantItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         Inventory inventory = player.getInventory();
+        boolean inventoryComplete = false;
         for (int i = 0; i < inventory.getContainerSize(); i++) {
+            if (i == inventory.getContainerSize() - 1) {
+                inventoryComplete = true;
+            }
             ItemStack stack = inventory.getItem(i);
 
             if (!stack.isDamageableItem() || !stack.isDamaged())
@@ -39,6 +44,35 @@ public class RingRepairInstantItem extends Item {
                     stack.setDamageValue(0);
                 }
             }
+        }
+        if(inventoryComplete) {
+            CuriosApi.getCuriosInventory(player).ifPresent(curiosInventory -> {
+                curiosInventory.getCurios().forEach((slotType, stacksCurio) -> {
+                    if (stacksCurio != null) {
+                        for (int i = 0; i < stacksCurio.getSlots(); i++) {
+                            ItemStack stackCurio = stacksCurio.getStacks().getStackInSlot(i);
+                            if (!stackCurio.isDamageableItem() || !stackCurio.isDamaged())
+                                continue;
+
+                            if(ConfigInit.RING_REPAIR_INSTANT_XP.get()) {
+                                int playerXp = Utilities.calcPlayerTotalXp(player.experienceProgress, player.experienceLevel);
+                                int damage = stackCurio.getDamageValue();
+                                if(damage <= playerXp) {
+                                    player.giveExperiencePoints(-damage);
+                                    stackCurio.setDamageValue(0);
+                                } else if (playerXp > 0) {
+                                    stackCurio.setDamageValue(damage - playerXp);
+                                    player.giveExperiencePoints(-playerXp);
+                                }
+                            } else {
+                                if (stackCurio.isDamaged()) {
+                                    stackCurio.setDamageValue(0);
+                                }
+                            }
+                        }
+                    }
+                });
+            });
         }
         return InteractionResultHolder.pass(player.getItemInHand(hand));
     }

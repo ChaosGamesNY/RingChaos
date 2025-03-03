@@ -17,7 +17,7 @@ public class RingDamageItem extends Item {
         for (int i = 0; i <= inventory.getContainerSize(); i++) {
             ItemStack stack = inventory.getItem(i);
             if(stack.isDamageableItem()) {
-                stack.setDamageValue(stack.getMaxDamage() - 5);
+                stack.setDamageValue(5);
             }
         }
         return InteractionResultHolder.pass(player.getItemInHand(hand));

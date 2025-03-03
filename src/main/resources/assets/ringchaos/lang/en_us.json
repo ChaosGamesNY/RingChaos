@@ -1,5 +1,7 @@
 {
   "config.ringchaos.server.ring_xp": "Ring XP Usage",
+  "config.ringchaos.server.slots": "Slot Settings",
+  "config.ringchaos.server.slots_ring_repair_slow": "Ring of Reconstruction Valid Slots",
   "constants.ringchaos.mod_name": "Ring Chaos",
   "item.ringchaos.ring_damage": "Second Hand Ring",
   "item.ringchaos.ring_glass": "Stone Throwing Ring",

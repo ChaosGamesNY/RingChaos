@@ -68,3 +68,7 @@
 - Got the recipes for the glass drops back to glass working as initially intended
 - Final testing!
 - Release!
+### 1.2.0, March 3, 2025
+- Added Curios as an _optional_ dependency
+- Ring of Reconstruction now works from within a curios slot
+- Both Ring of Reconstruction and Ring of Resurrection now repair items in curios slots.
