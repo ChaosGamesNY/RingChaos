@@ -63,6 +63,27 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ItemInit.SHATTERED_GLASS.get(), 2)
                 .unlockedBy(getHasName(ItemInit.SHATTERED_GLASS.get()), has(ItemInit.SHATTERED_GLASS.get()))
                 .save(pWriter, new ResourceLocation(RingChaos.MOD_ID, "glass_pane_from_shattered_glass"));
+
+        ShapedRecipeBuilder builder = ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ItemInit.PEARL_FRAGMENTS.get())
+                .pattern("ESG")
+                .pattern("LPL")
+                .pattern("GSE")
+                .define('E', Items.ECHO_SHARD)
+                .define('S', Items.POWDER_SNOW_BUCKET)
+                .define('G', Items.GHAST_TEAR)
+                .define('L', Items.LAVA_BUCKET)
+                .define('P', Items.ENDER_PEARL)
+                .unlockedBy(getHasName(Items.ECHO_SHARD), has(Items.ECHO_SHARD))
+                .unlockedBy(getHasName(Items.POWDER_SNOW_BUCKET), has(Items.POWDER_SNOW_BUCKET))
+                .unlockedBy(getHasName(Items.GHAST_TEAR), has(Items.GHAST_TEAR))
+                .unlockedBy(getHasName(Items.LAVA_BUCKET), has(Items.LAVA_BUCKET))
+                .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL));
+        builder.save(finishedRecipe -> pWriter.accept(
+                new LeaveBehindFinishedRecipe(
+                        finishedRecipe,
+                        new ResourceLocation(RingChaos.MOD_ID, "leave_behind")
+                )
+        ));
     }
 
     private void oreSmeltingRecipe(Consumer<FinishedRecipe> consumer, Ingredient ingredient, RecipeCategory category, Item result, float experience, int cookTime, String name) {

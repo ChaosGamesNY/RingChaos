@@ -38,6 +38,7 @@ minecraft {
 
         client {
             property 'forge.enabledGameTestNamespaces', mod_id
+            args "--username", "ChaosGames_nl", "--uuid", "8c942475-597f-4b7a-a5c4-09fad1b8143b"
         }
 
         server {
@@ -84,6 +85,17 @@ repositories {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    //Testing only dependencies. will be removed before release.
+    implementation fg.deobf("curse.maven:jei-238222:6600311")
+    implementation fg.deobf("curse.maven:jade-324717:6271651")
+    implementation fg.deobf("curse.maven:xaeros-minimap-263420:6778028")
+    implementation fg.deobf("curse.maven:xaeros-world-map-317780:6778091")
+    implementation fg.deobf("curse.maven:simple-magnets-394140:5828475")
+    implementation fg.deobf("curse.maven:supermartijn642s-config-lib-438332:4715408")
+    implementation fg.deobf("curse.maven:supermartijn642s-core-lib-454372:7426391")
+    implementation fg.deobf("curse.maven:config-menus-forge-544048:4672356")
+    implementation fg.deobf("curse.maven:catalogue-459701:4766090")
 
     // ============================================== DEPENDENCIES ================================================== \\
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")

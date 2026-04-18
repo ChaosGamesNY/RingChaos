@@ -72,3 +72,10 @@
 - Added Curios as an _optional_ dependency
 - Ring of Reconstruction now works from within a curios slot
 - Both Ring of Reconstruction and Ring of Resurrection now repair items in curios slots.
+### 1.3.0, January 25, 2026
+- Started adding the Rings of Breakage
+- got distracted with taking screenshots to illustrate the mod
+### 1.2.1, February 3, 2026
+- Changed the speed of the Ring of Reconstruction
+  - This had already been changed in the description but not actually changed in the code weirdly enough.
+- Fixed the Ring of Restoration not swinging on use.

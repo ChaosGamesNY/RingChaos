@@ -36,4 +36,7 @@ public class ItemInit {
                     .durability(100))));
     public static final RegistryObject<Item> SHATTERED_GLASS = addToTab(ITEMS.register("shattered_glass",
             () -> new Item(new Item.Properties())));
+
+    public static final RegistryObject<Item> PEARL_FRAGMENTS = addToTab(ITEMS.register("pearl_fragments",
+            () -> new Item(new Item.Properties())));
 }

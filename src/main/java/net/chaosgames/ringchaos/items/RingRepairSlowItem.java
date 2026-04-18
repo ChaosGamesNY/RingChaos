@@ -37,7 +37,7 @@ public class RingRepairSlowItem extends Item {
         if(ConfigInit.RING_REPAIR_SLOW_SLOT.get().equals(0) || ConfigInit.RING_REPAIR_SLOW_SLOT.get().equals(2)) {
             Player player = (Player) entity;
             if (slotId == 0) {
-                if (Math.floorMod(level.getGameTime(), 200) == 0) {
+                if (Math.floorMod(level.getGameTime(), 100) == 0) {
                     Inventory inventory = player.getInventory();
                     boolean inventoryComplete = false;
                     stopLoop = false;

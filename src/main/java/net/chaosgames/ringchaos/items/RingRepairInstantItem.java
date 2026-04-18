@@ -74,6 +74,6 @@ public class RingRepairInstantItem extends Item {
                 });
             });
         }
-        return InteractionResultHolder.pass(player.getItemInHand(hand));
+        return InteractionResultHolder.success(player.getItemInHand(hand));
     }
 }

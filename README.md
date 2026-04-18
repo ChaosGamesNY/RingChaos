@@ -8,7 +8,7 @@ by ChaosGames
 ## Description of Items Added by Ring Chaos
 ### Completed Rings as of release 1.0.0
 #### Ring of Reconstruction
-  - Slowly repairs all damaged items in the player's inventory one by one at a rate of  regaining 1 use every 200 ticks aka 10 seconds
+  - Slowly repairs all damaged items in the player's inventory one by one at a rate of  regaining 1 use every 100 ticks aka 5 seconds
   - Ring must be held in the off-hand for it to repair the items in the inventory.
   - All damaged items in the player inventory are included in the repair process, the entire hot bar, all 3 rows of inventory, any amor in the armor slots. Not sure if it will or can include any slots added by other mods.
   - Rarity: Uncommon

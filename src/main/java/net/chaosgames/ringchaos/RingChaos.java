@@ -19,6 +19,7 @@ public class RingChaos {
         CreativeTabInit.CREATIVE_MODE_TABS.register(modEventBus);
         ItemInit.ITEMS.register(modEventBus);
         BlockInit.BLOCKS.register(modEventBus);
+        RecipeInit.register(modEventBus);
         LootConditionsInit.LOOT_CONDITION_TYPES.register(modEventBus);
         ConfigInit.register();
 

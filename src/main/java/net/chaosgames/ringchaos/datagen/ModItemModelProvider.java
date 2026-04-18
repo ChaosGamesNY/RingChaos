@@ -26,6 +26,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ItemInit.RING_GLASS);
         simpleItem(ItemInit.SHATTERED_GLASS);
+
+        simpleItem(ItemInit.PEARL_FRAGMENTS);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
